@@ -51,15 +51,7 @@ From the marketplace:
 omarchy plugin add ak127a/instabox --enable
 ```
 
-Or from a checkout of this repository:
-
-```sh
-./install.sh
-```
-
-This copies the plugin to `~/.config/omarchy/plugins/ak.instabox`, rescans the
-shell, and enables the widget on the right side of the bar. To place it
-manually:
+Or copy the plugin into your shell config by hand:
 
 ```sh
 cp -r . ~/.config/omarchy/plugins/ak.instabox
