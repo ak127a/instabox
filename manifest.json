@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "ak.instabox",
+  "name": "Instabox",
+  "version": "0.1.0",
+  "author": "ak127a",
+  "license": "MIT",
+  "description": "Start, stop, and resume your Instabox sandboxes from the Omarchy bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Instabox",
+    "description": "One bar label and one panel listing every Instabox sandbox, with start, stop, and resume actions.",
+    "category": "Development",
+    "aliases": ["instabox", "sandboxes", "boxes"],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 30,
+      "labelMode": "Count"
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 5,
+        "max": 600,
+        "step": 5,
+        "defaultValue": 30,
+        "description": "How often the bar checks Instabox while the panel is closed. The panel polls faster while open and during a state change."
+      },
+      {
+        "key": "labelMode",
+        "type": "enum",
+        "label": "Bar label",
+        "options": ["Count", "Icon"],
+        "defaultValue": "Count",
+        "description": "Count shows running/total next to the mark; Icon shows only the mark."
+      }
+    ]
+  }
+}
